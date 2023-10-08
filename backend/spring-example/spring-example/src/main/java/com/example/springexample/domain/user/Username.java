@@ -5,15 +5,14 @@ import jakarta.persistence.Embeddable;
 import java.util.Objects;
 
 @Embeddable
-public class Lastname {
+public class Username {
 
-    private String lastName;
+    private String username;
 
-    public Lastname(String lastName){
-        this.lastName = lastName;
+    public Username(String username){
+        this.username = username;
     }
-
-    protected Lastname(){
+    protected Username(){
 
     }
 
@@ -21,23 +20,23 @@ public class Lastname {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Lastname lastname = (Lastname) o;
-        return Objects.equals(lastName, lastname.lastName);
+        Username username1 = (Username) o;
+        return Objects.equals(username, username1.username);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(lastName);
+        return Objects.hash(username);
     }
 
     @Override
     public String toString() {
-        return "Lastname{" +
-                "lastName='" + lastName + '\'' +
+        return "Username{" +
+                "username='" + username + '\'' +
                 '}';
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getUsername() {
+        return username;
     }
 }
